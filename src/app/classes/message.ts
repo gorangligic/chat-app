@@ -2,12 +2,19 @@ import { User } from '../interfaces/user';
 
 export class Message {
     message: string;
-    createdAt: Date;
     sender: User;
 
-    constructor({message, createdAt, sender}) {
-        this.message = message;
-        this.createdAt = createdAt;
-        this.sender = sender;
+    constructor() {
     }
+    // getTimeStamp() {
+    //     const now = new Date();
+    //     const date = now.getUTCFullYear() + '/' +
+    //                  (now.getUTCMonth() + 1) + '/' +
+    //                   now.getUTCDate();
+    //     const time = now.getUTCHours() + ':' +
+    //                  now.getMinutes() + ':' +
+    //                  now.getSeconds();
+    
+    //       return (date + ' ' + time);
+    //  }
 }
