@@ -21,7 +21,7 @@ export class AuthService {
     private router: Router,
     private alertService: AlertService,
     private afAuth: AngularFireAuth,
-    private db: AngularFirestore
+    private db: AngularFirestore,
   ) { 
     //preuzima korisnika iz baze i postavlja ga || TODO fetch the user from the Firebase backend, then set the user(actioned!)
     this.currentUser = this.afAuth.authState
@@ -55,7 +55,6 @@ export class AuthService {
             quote: 'Life is like a box chocolates, you never know what you are gonna get!',
             bio: 'Bio is under construction...'
           }
-
           userRef.set(updatedUser);
           return true;
         })

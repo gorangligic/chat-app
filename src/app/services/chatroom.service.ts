@@ -54,7 +54,7 @@ export class ChatroomService {
      const message = {
        message: text,
        createdAt: new Date(),
-       sender: this.authService.currentUserSnapshot
+       sender: this.authService.currentUserSnapshot,
      };
 
      this.db.collection(`chatrooms/${chatroomId}/messages`).add(message);
