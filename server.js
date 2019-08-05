@@ -9,7 +9,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/docs/index.html'));
 })
 
-app.listen(process.env.PORT || 5555)
+// app.listen(process.env.PORT || 5555)
+const port = process.env.PORT || 5555
 
 // var server = http.createServer(app);
 const server = require('http').createServer(app);
