@@ -26,3 +26,17 @@ button {
         }
     }
 }
+
+
+@media screen and (max-width: 480px) {
+    .navbar {
+
+        height: 130px;
+
+
+        img {
+            width: 180px;
+            height: 80px;
+        }
+    }
+}

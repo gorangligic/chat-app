@@ -24,6 +24,7 @@ import { LoadingService } from './services/loading.service';
 import { AuthService } from './services/auth.service';
 import { ChatroomService } from './services/chatroom.service';
 
+
 //Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -67,7 +68,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule
     // MomentModule
 
   ],
@@ -78,6 +79,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AuthGuard,
     ChatroomService,
     IsOwnerGuard
+    // JoinRoomService
   ],
   bootstrap: [AppComponent]
 })

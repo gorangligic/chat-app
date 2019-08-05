@@ -1,7 +1,7 @@
 
 <div class="chat-message d-flex">
   <div class="image-wrapper" [routerLink]="'/profile/' + message.sender.id">
-      <img [src]="message.sender.photoUrl" class="rounded-circle"> <!-- mogu iskoristiti za inicijale plugin od djoge  -->
+      <img [src]="message.sender.photoUrl" class="rounded-circle">
   </div>
    <div class="bubble d-flex flex-column">
      <div class="name" [routerLink]="'/profile/' + message.sender.id" >

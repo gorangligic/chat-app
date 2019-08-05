@@ -3,6 +3,8 @@ import { Observable, Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ChatroomService } from 'src/app/services/chatroom.service';
 import { LoadingService } from 'src/app/services/loading.service';
+// import { JoinRoomService } from 'src/app/services/joinroom.service';
+// import { User } from 'src/app/classes/user';
 
 @Component({
   selector: 'app-chatroom-window',
@@ -60,4 +62,11 @@ export class ChatroomWindowComponent implements OnInit, OnDestroy, OnDestroy, Af
       this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
     }catch(err){}
   }
+//   join(){
+//     this.chatService.joinRoom({user:this.user.firstName, messages:this.messages});
+// }
+
+// leave(){
+//     this.chatService.leaveRoom({user:this.user.firstName, messages:this.messages});
+// }
 }

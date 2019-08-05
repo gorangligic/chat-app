@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit, OnDestroy {
   
   public signupForm: FormGroup;
   private subscriptions: Subscription[] = [];
+  private roomInput: string;
 
   constructor(private fb: FormBuilder,
      private alertService: AlertService,
@@ -46,7 +47,7 @@ export class SignupComponent implements OnInit, OnDestroy {
       this.subscriptions.push(
         this.auth.signup(firstName, lastName, email, password).subscribe(success => {
           if (success) {
-            this.router.navigate(['/chat']);
+            this.router.navigate(['/chat']); 
           } else {
             const failedSignupAlert = new Alert('There was a problem signing up, try again', AlertType.Danger);
             this.alertService.alerts.next(failedSignupAlert);
