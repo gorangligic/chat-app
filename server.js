@@ -11,7 +11,8 @@ app.get('*', (req, res) => {
 
 app.listen(process.env.PORT || 5555)
 
-var server = http.createServer(app);
+// var server = http.createServer(app);
+const server = require('http').createServer(app);
 
 var io = require('socket.io').listen(server);
 
