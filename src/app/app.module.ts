@@ -4,21 +4,19 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
-//Modules
+//Moduli
 import { NgxLoadingModule } from 'ngx-loading';
 import { AlertModule } from 'ngx-bootstrap';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-// import { MomentModule } from 'ngx-moment';
-
 
 //Guard
 import { AuthGuard } from './guards/auth.guard';
 import { IsOwnerGuard } from './guards/is-owner.guard';
 
-//Services
+//Servisi
 import { AlertService } from './services/alert.service';
 import { LoadingService } from './services/loading.service';
 import { AuthService } from './services/auth.service';
