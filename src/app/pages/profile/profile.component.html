@@ -26,13 +26,13 @@
   </div>
   <div class="row justify-content-center" *ngIf="user?.id === currentUser?.id">
     <div class="col-xs-12 col-md-8 col-md-6 text-center edit-button">
-      <button [routerLink]="'/profile/' + currentUser?.id + '/edit'" class="btn btn-primary">Edit Profile</button>
+      <button [routerLink]="'/profile/' + currentUser?.id + '/edit'" class="btn btn-primary">Uredi profil</button>
     </div>
   </div>
 </div>
 
 <ng-template #noPhoto>
   <div class="no-photo d-flex justify-content-center align-items-center">
-    No Photo
+    Nema slike
   </div>
 </ng-template>
