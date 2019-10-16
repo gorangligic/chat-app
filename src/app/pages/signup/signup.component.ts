@@ -43,20 +43,20 @@ export class SignupComponent implements OnInit, OnDestroy {
   public submit(): void {
     if(this.signupForm.valid){
       const {firstName, lastName, email, password} = this.signupForm.value;
-      //TODO call the auth service
+      //poziva Auth servis
       this.subscriptions.push(
         this.auth.signup(firstName, lastName, email, password).subscribe(success => {
           if (success) {
             this.router.navigate(['/chat']); 
           } else {
-            const failedSignupAlert = new Alert('There was a problem signing up, try again', AlertType.Danger);
+            const failedSignupAlert = new Alert('Imate problem sa registracijom, pokusajte ponovo', AlertType.Danger);
             this.alertService.alerts.next(failedSignupAlert);
           }
           this.loadingService.isLoading.next(false); 
         })
       );
     } else {
-      const failedSignedAlert = new Alert('Please enter a valid name, email and password, try again', AlertType.Danger);
+      const failedSignedAlert = new Alert('Molimo vas unesite ispravno ime, email, lozinku, pokusajte ponovo', AlertType.Danger);
       this.alertService.alerts.next(failedSignedAlert);
     }
     
