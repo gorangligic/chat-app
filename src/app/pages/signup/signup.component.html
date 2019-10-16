@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="container-wrapper container d-flex justify-content-center align-items-center">
   <div class="form-wrapper text-center">
-    <h2 class="text-center">Sign Up</h2>
+    <h2 class="text-center">Registruj se</h2>
     <div class="col-sm-14">
     </div>
     <form [formGroup]="signupForm" (submit)="submit()" novalidate>
@@ -22,8 +22,8 @@
         <input type="password" class="form-control" id="password-input" placeholder="Password"
           formControlName="password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Registruj se</button>
     </form>
-    <small><a routerLink="/login"> Already have an Account </a></small>
+    <small><a routerLink="/login"> Vec imate nalog </a></small>
   </div>
 </div>
