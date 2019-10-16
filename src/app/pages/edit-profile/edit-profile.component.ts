@@ -59,7 +59,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     const filePath = `${file.name}_${this.currentUser.id}`;
     const task = this.fs.upload(filePath, file);
 
-    //observe(posmatrati) the precentage changes
+    //posmatrati) procenat promjene
     this.subscriptions.push(
       task.percentageChanges().subscribe(precentage => {
         if(precentage < 100) {
@@ -71,7 +71,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
       })
     );
 
-    //get notified when the download URL is available
+    //uzima notifikacije kada je dostupan URL za skidanje
     this.subscriptions.push(
       this.downloadURL().subscribe(url => this.downloadUrl = url)
     );
@@ -89,7 +89,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     const user = Object.assign({}, this.currentUser, {photoUrl: photo});
     const userRef: AngularFirestoreDocument<User> = this.db.doc(`users/${user.id}`);
     userRef.set(user);
-    this.alertService.alerts.next(new Alert('Your profiles was successfully updated!', AlertType.Success))
+    this.alertService.alerts.next(new Alert('Tvoj profil je uspjesno uredjen!', AlertType.Success))
     this.location.back();
   }
 
