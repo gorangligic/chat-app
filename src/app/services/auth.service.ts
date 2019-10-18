@@ -23,7 +23,7 @@ export class AuthService {
     private afAuth: AngularFireAuth,
     private db: AngularFirestore,
   ) { 
-    //preuzima korisnika iz baze i postavlja ga || TODO fetch the user from the Firebase backend, then set the user(actioned!)
+    //preuzima korisnika iz baze i postavlja ga ||
     this.currentUser = this.afAuth.authState
       .pipe(
         switchMap((user) => {
