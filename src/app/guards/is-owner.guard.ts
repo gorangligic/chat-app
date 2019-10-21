@@ -28,7 +28,7 @@ export class IsOwnerGuard implements  CanActivate{
         map((currentUser) => !!currentUser && currentUser.id === next.params.userId),
         tap((isOwner) => {
           if(!isOwner) {
-            this.alertService.alerts.next(new Alert('Mozete samo svoj profil izmjeniti.', AlertType.Danger))
+            this.alertService.alerts.next(new Alert('Mozete samo svoj profil da izmjenite.', AlertType.Danger))
             this.router.navigate(['/login'], {queryParams: { returnUrl: state.url }})
           }
         })
