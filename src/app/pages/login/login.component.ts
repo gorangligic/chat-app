@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     } 
     
     private displayFailedLogin(): void {
-      const failedLoginAlert = new Alert('Invalid email/password combination, try again.', AlertType.Danger);
+      const failedLoginAlert = new Alert('Nevazeca kombinacija email/lozinke, pokusajte ponovo.', AlertType.Danger);
       this.alertService.alerts.next(failedLoginAlert);
     }
   }
