@@ -27,7 +27,7 @@ export class AuthGuard implements CanActivate {
       map((currentUser) => !!currentUser),
       tap((loggedIn) => {
         if (!loggedIn) {
-          this.alertService.alerts.next(new Alert('Morate biti prijavljeni kako bi pristupli aplikaciji.', AlertType.Danger));
+          this.alertService.alerts.next(new Alert('Morate biti prijavljeni, kako bi pristupli aplikaciji.', AlertType.Danger));
           this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
         }
       })
