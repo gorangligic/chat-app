@@ -49,7 +49,7 @@ export class SignupComponent implements OnInit, OnDestroy {
           if (success) {
             this.router.navigate(['/chat']); 
           } else {
-            const failedSignupAlert = new Alert('Imate problem sa registracijom, pokusajte ponovo', AlertType.Danger);
+            const failedSignupAlert = new Alert('Imate problem sa registracijom, pokusajte ponovo!', AlertType.Danger);
             this.alertService.alerts.next(failedSignupAlert);
           }
           this.loadingService.isLoading.next(false); 
